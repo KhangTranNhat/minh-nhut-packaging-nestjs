@@ -16,6 +16,23 @@
     "noImplicitAny": false,
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@Usecase/*": [
+        "./src/usecase/*"
+      ],
+      "@Shared/*": [
+        "./src/shared/*"
+      ],
+      "@Infrastructures/*": [
+        "./src/infrastructures/*"
+      ],
+      "@Core/*": [
+        "./src/core/*"
+      ],
+      "@Api/*": [
+        "./src/api/*"
+      ]
+    }
   }
 }
