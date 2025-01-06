@@ -12,7 +12,7 @@ import { BannerModule } from '@Api/banner';
 
 @Module({
   imports: [MongooseModule,RepositoryModule,AuthModule,BannerModule, CloudinaryModule,LoggerModule],
-  controllers: [AppController],
+  controllers: [],
   providers: [
     AppService,
     {
