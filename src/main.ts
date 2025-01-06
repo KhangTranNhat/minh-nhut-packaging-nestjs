@@ -14,9 +14,8 @@ async function bootstrap() {
     AppModule,
     new FastifyAdapter(),
   )
-  // const app = await NestFactory.create(AppModule, {
-  //   bufferLogs: true,
-  // });
+
+
 
   const isDevelopment = process.env.NODE_ENV === 'development';
   const port = process.env.APP_PORT;
@@ -71,7 +70,7 @@ async function bootstrap() {
 
   // Set a global API prefix
   app.setGlobalPrefix(apiPrefix, {
-    exclude: [{path: '/', method: RequestMethod.GET}],
+
   });
 
   // swagger
