@@ -8,12 +8,13 @@ export  enum UPLOAD_ENDPOINTS{
   UPLOAD = '',
 }
 export  enum BANNER_ENDPOINTS{
-  CONTROLLER = 'auth',
+  CONTROLLER = 'banner',
+  CREATE = '',
   GET_BY_ID = ':id',
   GET_BY_SLUG = ':slug',
-  GET_LIST = ':slug',
-  DELETE_BY_ID = '::id',
-  UPDATE_BY_ID = '::id',
+  GET_LIST = '',
+  DELETE_BY_ID = ':id',
+  UPDATE_BY_ID = ':id',
 }
 
 export  enum PRODUCT_ENDPOINTS{

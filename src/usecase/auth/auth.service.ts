@@ -1,12 +1,12 @@
 import { Injectable } from '@nestjs/common';
 import { UserRepository } from '@Infrastructures/mongoose/repositories';
-import { LoginParamDto } from '@Api/auth/dto/param';
 import { BadRequestException } from '@Infrastructures/exception';
 import { ErrorCode } from '@Core/constants';
-import { AuthResultDto } from '@Api/auth/dto/result';
 import { BcryptService } from '@Infrastructures/service/bcrypt';
 import { JwtService } from '@Infrastructures/service/jwt';
 import { LoggerService } from '@Infrastructures/service/logger';
+import { LoginRequestDto } from '@Api/auth/dto/request';
+import { AuthResponseDto } from '@Api/auth/dto/response';
 
 @Injectable()
 export class AuthService {
@@ -17,7 +17,7 @@ export class AuthService {
     private readonly logger : LoggerService
   ) {}
 
-  async login(param: LoginParamDto) {
+  async login(param: LoginRequestDto) {
     this.logger.log('Start AuthService.login',`param: ${JSON.stringify(param)}`)
     const { username, password } = param;
 
@@ -34,7 +34,7 @@ export class AuthService {
     const accessToken = this.jwtService.generateAccessToken({
       userId: user._id,
     });
-    const dataReturn = new AuthResultDto({
+    const dataReturn = new AuthResponseDto({
       accessToken,
     });
     this.logger.log('End AuthService.login',`dataReturn: ${JSON.stringify(dataReturn)}`)

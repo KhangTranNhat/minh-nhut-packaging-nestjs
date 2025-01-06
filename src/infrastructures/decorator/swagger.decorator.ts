@@ -13,7 +13,7 @@ import {
   ApiResponseDto,
   PaginationResponseMetaDto,
   SuccessResponseMetaDto,
-} from '../../shared/dto/result';
+} from '@Shared/base/response';
 
 class CustomApiResponseOptions {
   type: any;

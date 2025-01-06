@@ -25,7 +25,7 @@ export enum ErrorCode {
   V001='Banner name is required',
   V002='Banner name must be string',
   V003='Banner image is required',
-  V004='Banner image must be string',
+  V004='Banner image must be number',
 
   V005='Product name is required',
   V006='Product name must be string',

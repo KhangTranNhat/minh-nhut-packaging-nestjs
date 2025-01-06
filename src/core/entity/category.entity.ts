@@ -1,4 +1,4 @@
-import { BaseEntity } from "@Shared/base";
+import { BaseEntity } from "@Shared/base/entity";
 import { HydratedDocument } from "mongoose";
 import { Prop, SchemaFactory } from "@nestjs/mongoose";
 import { Cloudinary } from "@Core/entity/cloudinary.entity";
